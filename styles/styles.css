@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* SETUP*/
+ 
  * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+    font-family: "Roboto";
   }
   
 body {
@@ -22,17 +27,137 @@ button {
   }
 
  header, footer, main {
-    border: 4px solid red;
-    min-height: 150px;
+
  }
  
  section {
-    border: 4px solid lime;
-    min-height: 200px; 
+
  } 
+
+ picture {
+   display: block;
+ }
+
+ img {
+   display: block;
+   width: 100%;
+   height: auto;
+ }
+
+ a {
+   color: inherit;
+   text-decoration: none;
+ }
+
+ p a, li a, {
+   color: blue;
+   text-decoration: underline;
+ }
+
+ /*DEV STYLES*/
+ /*body * {
+   border: 1px solid blue;
+   padding 2px;
+ } */
+
+/* Structure*/
+/*https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/*/
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+}
+main {
+    flex-grow: 1;
+
+}
 
 inner-column {
     display: block;
-    border: 4px solid orange;
+
     padding: 10px;
+    width: 98%;
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/**/
+.text-style-seg1 {
+   font-size: 40px;
+ 
+   line-height: 1.1;
+}
+
+.p-style-seg1 {
+   font-size: 1rem;
+   line-height: 1.1;
+}
+
+.button {
+   display: inline-block;
+   background-color: #3882F6;
+   color: white;
+   font-size: 1.2rem;
+   padding: 0.6em 2em;
+   border: 1px #3882F6;
+   border-radius: 10px;
+}
+
+/* Segment 1 MODULES*/
+
+/*section {
+   background-color: #1F2937;
+}*/
+
+graphic-two-images picture {
+
+}
+
+graphic-two-images {
+   display: block;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   padding-top: 100px;
+   padding-bottom: 150px;
+}
+
+graphic-two-images text-message {
+   display: block; 
+}
+
+graphic-two-images text-message .button {
+   margin-top: 10px;
+}
+
+@media (min-width: 700px) {
+   graphic-two-images {
+      flex-direction: row-reverse;
+   }
+}
+ 
+graphic-two-images :is(text-message, picture) {
+   flex-basis: 50%;
+
+}
+
+.segment1 {
+   background-color: #1F2937;
+   color: white;
+}
+
+header {
+   background-color: #1F2937;
+   color: white;
+   padding-top: 10px;
+}
+
+footer {
+   background-color: #1F2937;
+   color: white; 
+   font-size: 10px;
+   font-weight: lighter;
 }
