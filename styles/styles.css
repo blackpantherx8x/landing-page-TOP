@@ -11,28 +11,6 @@
     font-family: "Roboto";
   }
   
-body {
-   background: ;
-   color: ;
-   -webkit-font-smoothing: antialiased;
-  }
-  
-body, input, button {
-   font-size: ;
-   font-family: ;
- }
-
-button {
-   cursor: pointer;
-  }
-
- header, footer, main {
-
- }
- 
- section {
-
- } 
 
  picture {
    display: block;
@@ -86,14 +64,16 @@ inner-column {
 
 /**/
 .text-style-seg1 {
-   font-size: 40px;
- 
+   font-size: 40px; 
    line-height: 1.1;
 }
 
 .p-style-seg1 {
-   font-size: 1rem;
+   font-size: 18px;
    line-height: 1.1;
+   color: #E5E7EB;
+   margin-top: 10px;
+   margin-bottom: 20px;
 }
 
 .button {
@@ -101,6 +81,7 @@ inner-column {
    background-color: #3882F6;
    color: white;
    font-size: 1.2rem;
+   font-weight: bolder;
    padding: 0.6em 2em;
    border: 1px #3882F6;
    border-radius: 10px;
@@ -160,4 +141,43 @@ footer {
    color: white; 
    font-size: 10px;
    font-weight: lighter;
+}
+
+
+
+/*Segment 2*/
+
+.segment2 {
+
+   text-align: center;
+   color: #1F2937;
+   font-weight: bolder;
+   height: 500px;
+}
+
+.text-seg2 {
+   font-weight: bolder;
+   font-size: 30px;
+}
+
+.segment3 {
+   background-color: #E6E7EB;
+}
+
+.quote {
+   font-size: 30px;
+   line-height: 1.5;
+   font-style: italic;
+   display: flex;
+   justify-content: center;
+   margin-top: 120px;
+}
+
+.author {
+   color: #1F2937;
+   font-weight: bolder;
+   text-align: right;
+   width: 86%;
+   font-size: 30px;
+   margin-bottom: 120px;
 }
