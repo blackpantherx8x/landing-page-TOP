@@ -14,6 +14,7 @@
 
  picture {
    display: block;
+
  }
 
  img {
@@ -104,6 +105,7 @@ graphic-two-images {
    gap: 20px;
    padding-top: 100px;
    padding-bottom: 150px;
+   border: 6px solid blue;
 }
 
 graphic-two-images text-message {
@@ -114,12 +116,13 @@ graphic-two-images text-message .button {
    margin-top: 10px;
 }
 
+
 @media (min-width: 700px) {
    graphic-two-images {
       flex-direction: row-reverse;
    }
 }
- 
+
 graphic-two-images :is(text-message, picture) {
    flex-basis: 50%;
 
@@ -128,6 +131,7 @@ graphic-two-images :is(text-message, picture) {
 .segment1 {
    background-color: #1F2937;
    color: white;
+   border: 6px solid lime;
 }
 
 header {
@@ -147,17 +151,18 @@ footer {
 
 /*Segment 2*/
 
-.segment2 {
-
-   text-align: center;
-   color: #1F2937;
-   font-weight: bolder;
-   height: 500px;
+.img1 {
+   width: 250px;
+   height: 250px;
+   border-radius: 8px;
 }
+
+/*Segment 3*/
 
 .text-seg2 {
    font-weight: bolder;
    font-size: 30px;
+   border: 6px solid red;
 }
 
 .segment3 {
@@ -171,6 +176,7 @@ footer {
    display: flex;
    justify-content: center;
    margin-top: 120px;
+
 }
 
 .author {
@@ -180,4 +186,17 @@ footer {
    width: 86%;
    font-size: 30px;
    margin-bottom: 120px;
+}
+
+.header-segment2 {
+   text-align: center;
+   color:#1F2937
+}
+
+.heading-seg2 {
+   font-size: 40px;
+}
+
+.image-boxes {
+   display: flex;  
 }
