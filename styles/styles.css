@@ -33,11 +33,6 @@
    text-decoration: underline;
  }
 
- /*DEV STYLES*/
- /*body * {
-   border: 1px solid blue;
-   padding 2px;
- } */
 
 /* Structure*/
 /*https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/*/
@@ -61,6 +56,7 @@ inner-column {
     max-width: 1500px;
     margin-right: auto;
     margin-left: auto;
+
 }
 
 /**/
@@ -88,6 +84,98 @@ inner-column {
    border-radius: 10px;
 }
 
+
+/* HEADER */
+
+nav ul{
+   list-style: none;
+   padding:0;
+   background:#1F2937;
+}
+
+nav ul li a{
+   color:#ddd;
+   text-decoration: none;
+   padding: .8rem 1rem;
+   display: block;
+   line-height: 1;
+}
+
+/*styling logo*/
+
+nav div:first-child{
+   background:#1F2937;
+}
+nav div:first-child h1{
+   line-height: 0;
+   padding: .8rem 0rem;
+   text-align: center;
+}
+nav div:first-child img{
+   filter: contrast(0);
+}
+
+nav div:first-child h1, nav ul{
+   margin:0;
+}
+
+ul {
+   font-size: 20px;
+   
+}
+
+
+@media only screen and (min-width: 30em){
+   nav{
+       display: flex;
+       justify-content: space-between;
+       background: #1F2937;
+       align-items: center;
+   }
+   
+   nav ul{
+       display: flex;
+       align-items: center;
+       background:none;
+       flex-wrap: wrap;
+   }
+   nav div:first-child h1{
+       padding: 0;
+       margin:0 1rem;
+   }
+   nav div:first-child img{
+       height: 40px;
+       
+   }
+   nav ul li{
+       border-bottom:none;
+       flex: 1 0 auto;
+       position: relative;
+   }
+   nav ul li a{
+       padding:1.2rem 1rem;
+   }
+   nav ul li a::before, nav ul li a::after{
+       content: "";
+       position: absolute;
+       bottom:0;
+       right: 0;
+       width:0%;
+       height: 2px;
+       background:red;
+       transition: .2s width ease-in-out;
+   }
+   
+   nav ul li a::before{
+       left:0;
+   }
+   
+   nav ul li a:hover::after,nav ul li a:hover::before{
+       width: 50%;
+   } 
+  
+}
+
 /* Segment 1 MODULES*/
 
 /*section {
@@ -105,7 +193,6 @@ graphic-two-images {
    gap: 20px;
    padding-top: 100px;
    padding-bottom: 150px;
-   border: 6px solid blue;
 }
 
 graphic-two-images text-message {
@@ -131,7 +218,6 @@ graphic-two-images :is(text-message, picture) {
 .segment1 {
    background-color: #1F2937;
    color: white;
-   border: 6px solid lime;
 }
 
 header {
@@ -157,12 +243,39 @@ footer {
    border-radius: 8px;
 }
 
+.segment2 {
+      margin: 50px;
+   }
+
+
+
+.lower-text {
+
+   }
+
+.bottom-button {
+   margin-left: 600px;
+   border: 3px solid white;
+   border-radius: 10px;
+
+}
+
+
 /*Segment 3*/
+
+.blue-sign-up-box {
+
+   background-color: #3882F6;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+   }
 
 .text-seg2 {
    font-weight: bolder;
    font-size: 30px;
-   border: 6px solid red;
+
 }
 
 .segment3 {
@@ -185,7 +298,7 @@ footer {
    text-align: right;
    width: 86%;
    font-size: 30px;
-   margin-bottom: 120px;
+   margin-bottom: 80px;
 }
 
 .header-segment2 {
@@ -200,5 +313,89 @@ footer {
 .image-boxes {
    display: flex;
    justify-content: center;
-   gap: 20px;  
+   flex-wrap: wraP;
+   gap: 40px;  
+   margin-bottom: 70px;
+   margin-top: 50px;
 }
+
+.paragraph-box1 {
+   font-size: 16px;
+   font-weight: bolder;
+   margin-top: 10px;
+   text-align: center;
+}
+
+/*Segment 4*/
+
+/* desktop styles */
+
+.segment4 {
+   padding-top: 70px;
+   padding-bottom: 70px;
+ }
+
+.bluebox-seg4 {
+   width: 65%;
+   min-height: 150px;
+   margin-right: auto;
+   margin-left: auto;
+   background-color: #3881f6;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+ }
+
+ .text-seg4 {
+   color: white;
+   margin-left: 20px;
+   padding: 20px;
+ }
+
+ .headerseg4 {
+   font-size: 20px;
+ }
+
+ .paraseg4 {
+   font-weight: normal;
+   font-size: 15px;
+ }
+
+ .button-seg4 {
+   min-width: 120px;
+   min-height: 40px;
+   background-color: rgb(255, 84, 84);
+   border: 1.5px solid rgb(255, 255, 255);
+   border-radius: 8px;
+   font-weight: bolder;
+   color: rgb(255, 255, 255);
+   margin-right: 10px;
+   white-space: nowrap;
+   margin-bottom: 5px;
+ }
+
+ .buttonseg4-hover {
+   cursor: pointer;
+   background-color: red;
+ }
+
+ @media (max-width: 768px) { /* adjust based on your desired screen size */
+   .bluebox-seg4 {
+     flex-direction: column;
+   }
+ }
+
+/* FOOTER */
+
+ .footer {
+   display: flex;
+   justify-content: center;
+   color: rgb(255, 255, 255);
+   font-size: 15px;
+ }
+
+/*FRAGEN:
+1. Header: Wie die LINKS ganz rechts anordnen
+2. Wie die Bilder responsive mobile-kompatibel machen?
